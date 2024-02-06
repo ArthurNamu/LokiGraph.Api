@@ -12,7 +12,7 @@ Log.Logger = new LoggerConfiguration()
         .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
         .Enrich.FromLogContext()
         .WriteTo.Console()
-        .WriteTo.GrafanaLoki("http://loki:3100")
+        .WriteTo.GrafanaLoki("http://localhost:3100")
         .CreateLogger();
 
 // Add services to the container.
